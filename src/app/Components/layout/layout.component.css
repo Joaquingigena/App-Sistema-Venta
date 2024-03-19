@@ -1,0 +1,8 @@
+.menu-item {
+    display: flex;
+    align-items: center;
+}
+
+.barra-color{
+    background-color: #76CBB8;
+}

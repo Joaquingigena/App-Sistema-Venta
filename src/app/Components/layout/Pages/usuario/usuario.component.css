@@ -1,0 +1,15 @@
+
+table{
+    width: 100%;
+}
+
+.mat-form-field{
+    width: 100%;
+    font-size: 14px;
+}
+
+.color-bloom{
+    background-color: #32C196;
+    color: black;
+    margin-bottom: 20px;
+}

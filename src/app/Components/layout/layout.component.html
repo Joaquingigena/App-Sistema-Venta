@@ -1,0 +1,78 @@
+<mat-toolbar class="barra-color">
+    <mat-toolbar-row>
+        <h1>Sistema Ventas</h1>
+        
+        <button mat-icon-button (click)="sidenav.toggle();">
+            <mat-icon>menu</mat-icon>
+        </button>
+
+        <span style="flex: 1 1 auto;" ></span>
+        <label style="margin-right: 20px;font-size: 14px;">
+        {{correoUsuario}} {{rolUsuario}}
+        </label>
+
+        <button mat-icon-button (click)="cerrarSesion()">
+            <mat-icon>logout</mat-icon>
+        </button>
+
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container>
+    <mat-sidenav #sidenav opened="true" mode="side" style="width: 200px;">
+        <mat-nav-list>
+   
+
+            <mat-list-item routerLink="/pages/usuarios">
+               <div class="menu-item">
+                    <mat-icon mat-list-icon>group</mat-icon>
+                    <div class="menu-item">Usuarios</div>
+               </div>
+            </mat-list-item>
+
+            <mat-list-item routerLink="/pages/productos">
+                <div class="menu-item">
+                    <mat-icon mat-list-icon> collections_bookmark</mat-icon>
+                    <div class="menu-item">Productos</div>  
+                </div>
+            </mat-list-item>
+
+            <mat-list-item routerLink="/pages/venta">
+                <div class="menu-item">
+                    <mat-icon mat-list-icon>currency_exchange</mat-icon>
+                <div class="menu-item">Venta</div>
+                </div>
+            </mat-list-item>
+
+            <mat-list-item routerLink="/pages/historial-venta">
+                <div class="menu-item">
+                    <mat-icon mat-list-icon> edit_note</mat-icon>
+                    <div class="menu-item">Historial Ventas</div>
+                </div>
+            </mat-list-item>
+
+            <mat-list-item routerLink="/pages/reporte">
+               <div class="menu-item">
+                <mat-icon mat-list-icon> receipt</mat-icon>
+                <div class="menu-item">Reportes</div>
+               </div>
+            </mat-list-item>
+
+                     
+            <mat-list-item routerLink="/pages/dashboard">
+                <div class="menu-item">
+                    <mat-icon mat-list-icon>dashboard</mat-icon>
+                    <div >DashBoard</div>
+                </div>
+            </mat-list-item>
+
+        </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <div style="height: 90vh;">
+            <router-outlet></router-outlet>
+
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
